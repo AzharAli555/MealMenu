@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_menu"
+
+    android:clickable="true"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/size_device_15"
+        android:layout_marginTop="@dimen/size_device_15"
+        android:src="@drawable/logo"
+        android:id="@+id/imageView" />
+
+    <LinearLayout
+        android:id="@+id/llayout_btn"
+        android:layout_width="@dimen/size_device_200"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/size_device_15"
+        android:layout_marginTop="@dimen/size_device_15"
+        android:background="@drawable/bg_buttons"
+        android:orientation="horizontal"
+        android:layout_alignBottom="@+id/imageView">
+
+        <TextView
+            android:id="@+id/tv_menu"
+            android:layout_width="@dimen/size_device_60"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_device_5"
+            android:gravity="center"
+            android:text="@string/btn_menu"
+            android:textColor="@color/color_white" />
+
+        <View
+            android:layout_width="@dimen/size_device_1"
+            android:layout_height="match_parent"
+            android:background="@color/color_white" />
+
+        <TextView
+            android:id="@+id/tv_language"
+            android:layout_width="@dimen/size_device_60"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_device_5"
+            android:gravity="center"
+            android:text="@string/btn_language"
+            android:textColor="@color/color_white" />
+
+        <View
+            android:layout_width="@dimen/size_device_1"
+            android:layout_height="match_parent"
+            android:background="@color/color_white" />
+
+        <TextView
+            android:id="@+id/tv_quit"
+            android:layout_width="@dimen/size_device_60"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="@dimen/size_device_5"
+            android:gravity="center"
+            android:text="@string/btn_quit"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+    <!--size_device_160-->
+
+    <FrameLayout
+        android:id="@+id/selectableItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llayout_btn"
+        android:layout_marginLeft="@dimen/size_device_20"
+        android:layout_marginRight="@dimen/size_device_20"
+        android:layout_marginTop="@dimen/size_device_30"
+
+
+        >
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/flMain"
+            android:background="@drawable/bg_grid_menu"
+            android:layout_height="wrap_content">
+
+            <!--          <ImageView
+                          android:id="@+id/iv_arrow_left"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="@dimen/size_device_80"
+                          android:layout_gravity="left"
+
+                          android:layout_marginLeft="@dimen/size_device_10"
+                          android:src="@drawable/arrow_left" />-->
+            <ImageView
+                android:id="@+id/iv_arrow_left"
+                android:layout_width="wrap_content"
+                android:src="@drawable/arrow_left"
+                android:layout_marginLeft="@dimen/size_device_10"
+                android:layout_marginTop="@dimen/size_device_80"
+                android:layout_gravity="left"
+                android:layout_height="wrap_content" />
+
+            <!--        <ImageView
+                        android:id="@+id/iv_background"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/iv_arrow_left"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_grid_menu" />-->
+
+            <ImageView
+                android:id="@+id/iv_arrow_right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginTop="@dimen/size_device_80"
+                android:layout_marginRight="@dimen/size_device_10"
+                android:src="@drawable/arrow_right" />
+
+        </FrameLayout>
+
+
+
+        <com.intuitiveappstudio.mealmenu.adapters.HorizontalListView
+            android:id="@+id/listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_gravity="center|center_horizontal"
+            android:layout_marginLeft="@dimen/size_device_50"
+            android:layout_marginTop="@dimen/size_device_10"
+            android:layout_centerInParent="true"
+
+            android:layout_marginRight="@dimen/size_device_50"
+            android:background="@android:color/transparent" />
+
+        <ImageView
+            android:id="@+id/iv_detail_background"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_device_140"
+            android:layout_gravity="bottom"
+            android:visibility="gone"
+            android:scaleType="fitXY"
+            android:layout_marginBottom="@dimen/size_device_25"
+            android:src="@drawable/bg_detail_grid_lower_menu" />
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom|left"
+            android:visibility="gone"
+            android:id="@+id/fLleft"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/bg_lower_arrow_left"
+                android:scaleType="fitXY"
+                android:id="@+id/bg_lower_arrow_left"
+
+
+                android:layout_marginBottom="@dimen/size_device_25"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/icon_detail_left"
+                android:scaleType="fitXY"
+
+                android:id="@+id/iv_lower_left_arrow"
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="@dimen/size_device_40"
+                android:layout_height="wrap_content" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_gravity="bottom|right"
+            android:visibility="gone"
+            android:id="@+id/fLRight"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/bg_lower_arrow_right"
+                android:scaleType="fitXY"
+                android:id="@+id/bg_lower_arrow_right"
+
+                android:layout_gravity="bottom|right"
+                android:layout_marginBottom="@dimen/size_device_25"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/icon_detail_right"
+                android:scaleType="fitXY"
+
+                android:id="@+id/iv_lower_right_arrow"
+                android:layout_gravity="bottom|left"
+                android:layout_marginBottom="@dimen/size_device_40"
+                android:layout_height="wrap_content" />
+
+        </FrameLayout>
+
+        <com.intuitiveappstudio.mealmenu.adapters.HorizontalListView
+            android:id="@+id/listviewCircle"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/size_device_100"
+            android:visibility="gone"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/size_device_50"
+            android:layout_marginBottom="@dimen/size_device_40"
+
+            android:layout_marginRight="@dimen/size_device_50"
+            android:background="@android:color/transparent" />
+    </FrameLayout>
+
+
+</RelativeLayout>

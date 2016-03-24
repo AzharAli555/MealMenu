@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:id="@+id/rl_main"
+
+        android:layout_height="wrap_content">
+
+       <!-- <ImageView
+            android:layout_width="@dimen/size_device_80"
+            android:id="@+id/iv_image"
+            android:background="@drawable/circle"
+            android:src="@drawable/fruit_image"
+            android:layout_height="@dimen/size_device_80"
+            android:layout_centerHorizontal="true"
+         />-->
+        <com.github.siyamed.shapeimageview.CircularImageView
+            android:layout_width="@dimen/size_device_80"
+            android:layout_height="@dimen/size_device_80"
+            android:id="@+id/iv_image"
+            android:src="@drawable/fruit_image"
+            app:siBorderWidth="2dp"
+            app:siBorderColor="@color/detail_screen_border"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_title"
+            android:background="@android:color/transparent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:layout_marginTop="@dimen/size_device_7"
+            android:textColor="@color/color_white"
+            android:layout_below="@id/iv_image"
+            android:layout_gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+           />
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_toRightOf="@+id/rl_main"
+        android:layout_height="wrap_content">
+        <View
+            android:layout_width="@dimen/size_device_3"
+            android:background="@android:color/transparent"
+            android:layout_height="@dimen/size_device_80"/>
+    </RelativeLayout>
+</RelativeLayout>

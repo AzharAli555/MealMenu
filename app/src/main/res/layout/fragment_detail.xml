@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/size_device_15"
+    android:clickable="true"
+    android:background="@drawable/bg_detail_border"
+    android:layout_height="match_parent">
+
+
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:foreground="@drawable/ic_exit"
+android:layout_alignParentRight="true"
+        android:padding="@dimen/size_device_10"
+        android:layout_height="wrap_content">
+
+    </FrameLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_margin="@dimen/size_device_5"
+    android:background="@drawable/bg_detail_screen"
+    android:layout_height="match_parent">
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:id="@+id/tv_title"
+    android:layout_marginTop="@dimen/size_device_10"
+    android:layout_marginLeft="@dimen/size_device_10"
+    android:textColor="@color/detail_screen_border"
+    android:textSize="@dimen/text_size_15"
+    android:textStyle="bold"
+      android:text="Fresh Juices"
+    android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/size_device_20"
+        android:id="@+id/rlFruit"
+        android:layout_height="wrap_content">
+        <com.github.siyamed.shapeimageview.RoundedImageView
+            android:layout_width="@dimen/size_device_170"
+            android:layout_height="@dimen/size_device_170"
+            android:src="@drawable/fruit_image"
+            android:scaleType="centerCrop"
+            app:siRadius="6dp"
+            app:siBorderWidth="6dp"
+            app:siBorderColor="@color/detail_screen_border"
+            app:siSquare="true"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/detail_screen_border"
+        android:textSize="@dimen/text_size_10"
+        android:layout_toLeftOf="@+id/rlFruit"
+        android:layout_below="@+id/tv_title"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="@dimen/size_device_10"
+        android:text="Fresh Juices."
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
+
+</RelativeLayout>
